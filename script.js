@@ -7,6 +7,9 @@ let encriptar=()=>{
    let description=document.getElementById('content-description')
    let cadEncriptada=''
    let btnCopy=document.getElementById('btn-copy')
+   btnCopy.style.background = '';
+   btnCopy.style.color=''
+   btnCopy.innerHTML='copiar'
     //CADENA CON MAYUSCULAS
 
    if(!validacionesComunes(info,title, description, btnCopy ))
@@ -42,12 +45,15 @@ let encriptar=()=>{
     
 }
 let desencriptar=()=>{
-
+    
     let info= document.getElementById('data')
     let title=document.getElementById('content-title')
     let description=document.getElementById('content-description')
     let btnCopy=document.getElementById('btn-copy')
     let cadDesencriptada=''
+    btnCopy.style.background = '';
+    btnCopy.style.color=''
+    btnCopy.innerHTML='copiar'
      //CADENA CON MAYUSCULAS
  
     if(!validacionesComunes(info,title, description, btnCopy ))
@@ -101,8 +107,13 @@ let copyText=()=>{
     let description=document.getElementById('content-description')
     navigator.clipboard.writeText(description.textContent)
   .then(() => {
+    let btnCopy=document.getElementById('btn-copy')
+    
+    btnCopy.style.background = '#E5E5E5';
+    btnCopy.style.color='#0A3871'
+    btnCopy.innerHTML='copiado'
   })
-  .catch(err => {
+  .catch(err => {   
     console.error('Error al copiar al portapapeles:', err)
   })
 }
