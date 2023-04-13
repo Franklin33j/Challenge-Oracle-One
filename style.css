@@ -168,3 +168,15 @@ left: 5%;
 }
 
 
+.btn-copy{
+    margin-top: 40px;
+    width: 100%;
+    display: none;
+    border: none;
+    text-align: center;
+    background: #0A3871;
+    border-radius: 10px 10px;
+    font-size: 20px;
+    color:#D8DFE8;
+    padding: 10px 25px;
+}
